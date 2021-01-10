@@ -6,7 +6,7 @@
   "homepage": "https://vitaliikyba.github.io/project_Lorem/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch webpack serve --open",
+    "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack",
     "deploy": "gh-pages -d dist",
