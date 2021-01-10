@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/swiper-bundle.css */ "./node_modules/swiper/swiper-bundle.css");
 
 
-var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__.default(".swiper-container", {
+var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__.default(".image-slider", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
@@ -11945,4 +11945,4 @@ module.exports = __webpack_require__.p + "images/Rectangle36.png";
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
-//# sourceMappingURL=main.23d7a7f85469d3fee8e7.js.map
+//# sourceMappingURL=main.85e3799f62ae1f118b84.js.map
