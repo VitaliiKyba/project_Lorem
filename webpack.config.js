@@ -27,7 +27,7 @@ module.exports = {
   mode: "development",
   entry: {
     main: "./src/scripts/main.js",
-    scroll: "/src/scripts/scroll.js",
+    //scroll: "/src/scripts/scroll.js",
   },
   output: {
     filename: "[name].[contenthash].js",
