@@ -9,7 +9,7 @@
     "watch": "webpack --watch webpack serve --open",
     "start": "webpack serve --open",
     "build": "webpack",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
   "author": "Vitalii_Kyba",
