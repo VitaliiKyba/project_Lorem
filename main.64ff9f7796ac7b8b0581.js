@@ -12,9 +12,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_styles_style_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../src/styles/style.sass */ "./src/styles/style.sass");
 /* harmony import */ var _src_img_Polygon_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../src/img/Polygon.png */ "./src/img/Polygon.png");
 /* harmony import */ var _src_img_Rectangle36_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/img/Rectangle36.png */ "./src/img/Rectangle36.png");
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
-/* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/swiper-bundle.css */ "./node_modules/swiper/swiper-bundle.css");
-/* harmony import */ var _src_scripts_swiper_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../src/scripts/swiper.js */ "./src/scripts/swiper.js");
+/* harmony import */ var _src_img_Rectangle46_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../src/img/Rectangle46.png */ "./src/img/Rectangle46.png");
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
+/* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/swiper-bundle.css */ "./node_modules/swiper/swiper-bundle.css");
+/* harmony import */ var _src_scripts_swiper_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../src/scripts/swiper.js */ "./src/scripts/swiper.js");
+
 
 
 
@@ -62,10 +64,20 @@ var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__.default(".image-slid
   scrollbar: {
     el: ".swiper-scrollbar"
   },
+  // Управление колесом мыши
+  mousewheel: {
+    // Чувствительность колеса мыши
+    sensitivity: 1 // Класс объекта на котором
+    // будет срабатывать прокрутка мышью.
+    //eventsTarget: ".image-slider"
+
+  },
+  // Скорость
+  speed: 900,
   //Количество слайдов в окне
   slidesPerView: 3,
   //Расстояние между слайдами
-  spaceBetween: 50,
+  spaceBetween: 25,
   // Количество пролистываемых слайдов
   slidesPerGroup: 1,
   // Активный слайд по центру
@@ -11877,6 +11889,16 @@ module.exports = __webpack_require__.p + "images/Polygon.png";
 
 module.exports = __webpack_require__.p + "images/Rectangle36.png";
 
+/***/ }),
+
+/***/ "./src/img/Rectangle46.png":
+/*!*********************************!*\
+  !*** ./src/img/Rectangle46.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "images/Rectangle46.png";
+
 /***/ })
 
 /******/ 	});
@@ -11945,4 +11967,4 @@ module.exports = __webpack_require__.p + "images/Rectangle36.png";
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
-//# sourceMappingURL=main.85e3799f62ae1f118b84.js.map
+//# sourceMappingURL=main.64ff9f7796ac7b8b0581.js.map
