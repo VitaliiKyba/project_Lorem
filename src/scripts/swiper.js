@@ -22,11 +22,23 @@ const swiper = new Swiper(".image-slider", {
     el: ".swiper-scrollbar",
   },
 
+  // Управление колесом мыши
+  mousewheel: {
+    // Чувствительность колеса мыши
+    sensitivity: 1,
+    // Класс объекта на котором
+    // будет срабатывать прокрутка мышью.
+    //eventsTarget: ".image-slider"
+  },
+
+  // Скорость
+  speed: 900,
+
   //Количество слайдов в окне
   slidesPerView: 3,
 
   //Расстояние между слайдами
-  spaceBetween: 50,
+  spaceBetween: 25,
 
   // Количество пролистываемых слайдов
   slidesPerGroup: 1,

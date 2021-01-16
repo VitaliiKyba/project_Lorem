@@ -65,7 +65,7 @@ var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__.default(".image-slid
   //Количество слайдов в окне
   slidesPerView: 3,
   //Расстояние между слайдами
-  spaceBetween: 50,
+  spaceBetween: 35,
   // Количество пролистываемых слайдов
   slidesPerGroup: 1,
   // Активный слайд по центру
@@ -11945,4 +11945,4 @@ module.exports = __webpack_require__.p + "images/Rectangle36.png";
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
-//# sourceMappingURL=main.85e3799f62ae1f118b84.js.map
+//# sourceMappingURL=main.fd3dbe006e41e5e90ba9.js.map

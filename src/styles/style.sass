@@ -1,4 +1,5 @@
-//"~normalize.css"
+@import 'variables'
+@import 'mixins'
 
 *
     margin: 0
@@ -168,8 +169,21 @@ ul
 .wrapper
     margin: 20vh
     padding: 30px
-    height: 500px
-    width: 60vw
+    height: 80vh
+    width: 65vw
+    background: #FFFFFF
+
+.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal
+    position: absolute
+    border-radius: 20px
+    width: 65vw
+    height: 64vh
+    display: flex
+    justify-content: space-around
+    z-index: 999
+    opacity: 1
+    background: #FFFFFF
+    padding: 30px
 
 .title
     font-size: 30px
@@ -182,28 +196,36 @@ ul
 
 .image-slider__image
     width: 18.8vw
-    height: 53.2vh
+    height: 54vh
     text-align: center
     box-sizing: border-box
     box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.06)
     border-radius: 20px
-
+    opacity: 1
+    
 .image-slider__image .img
     max-width: 100%
-    
+
+.swiper-button-prev
+    margin-left: 7vw
+.swiper-button-next
+    margin-right: 2.5vw 
 .image-slider .swiper-button-prev::after,
 .image-slider .swiper-button-next::after
     color: #0093E6
     background: #FFF
     font-size: 40px
     
-.image-slider .swiper-pagination
-    bottom: 30px
-
-.image-slider .swiper-pagination-bullet
+    
+.swiper-pagination.swiper-pagination-bullets
+    position: absolute
+    
+    
+.swiper-pagination-bullet-active
     width: 10px
     height: 10px
     background-color: #4A4D4E
+
 
 .card
     height: 24vh
@@ -235,7 +257,7 @@ ul
     display: flex
     justify-content: space-around
     margin-bottom: 3.5vh
-.content-list1_style
+.content-list1_style, .scn-list_style
     margin: 6px 0px 0px 3px
     width: 0.5vw
     height: 0.5vw
@@ -279,14 +301,174 @@ ul
     background: #0093E6
 .list3
     width: 15vw
-#svg
-    overflow: visible
-    height: 100%
-    max-width: 100%
 
-#svg line
-    stroke-width: 2
-    stroke: gray
+.body
+    display: flex
+    position: relative
+    width: 89.9vw
+    height: 172vh
+    top: -60vh
+    left: 10.1vw
+    background: #F9F9F9
 
-// #svg .astronaut
-//   visibility: hidden
+.section_container
+    position: absolute
+    z-index: 1
+
+.body-description_head
+    display: flex
+    margin-top: 40vh
+.bdh
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 40px
+    line-height: 100%
+    margin-left: 7vw
+    color: #4A4D4E
+
+.blue-line
+    width: 38.3vw
+    height: 0.7vh
+    margin-top: 3.5vh
+    margin-left: 0.5vw
+    background: #0093E6
+
+.body_main
+    display: flex
+    margin-top: 7vh
+
+.column_number
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 40px
+    line-height: 59px
+    align-items: center
+    text-align: right
+    margin-left: 10vw
+    margin-top: 4vh
+    margin-right: 1.6vw
+    color: #0093E6
+
+.column_text
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 140%
+    margin-top: 8vh
+    color: #4A4D4E
+
+.column-right_first-line, .column-right_second-line,
+.column-right_third-line, .column-left_first-line,
+.column-left_third-line, .column-left_second-line
+    display: flex
+
+.scn-img
+    position: absolute
+    top: 120vh
+    left: -10vw
+    & img
+        max-width: 75%
+        height: auto
+
+.scn-block-info
+    position: absolute
+    top: 119vh
+    left: 48vw
+
+.scn_head-text
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 28px
+    line-height: 120%
+    color: #4A4D4E
+
+.scn-block-info_description
+    margin: 3vh 0vh 3vh 0vh
+
+.scn_description-text
+    font-family: Roboto
+    font-style: normal
+    font-weight: 300
+    font-size: 14px
+    line-height: 140%
+    color: #8f989b
+
+.scn-block-info_list
+    display: flex
+    margin-top: 4vw
+
+.scn-list
+    display: flex
+    margin: 3vh 0vh 3vh 0vh
+
+.scn-list_style
+    margin: 1.2vh 0.8vw 1.2vh 0.8vw
+
+.svg
+    display: flex
+    justify-content: center
+
+
+.first
+    animation-name: line
+    animation-duration: 3s
+    animation-iteration-count: infinite
+
+@keyframes line
+    0%
+        stroke: #B4B4B4
+    30%
+        stroke: #B4B4B4
+    40%
+        stroke: #0093E6
+    100%
+        stroke: #0093E6
+
+.second
+    animation-name: line2
+    animation-duration: 3s
+    animation-iteration-count: infinite
+
+@keyframes line2
+    0%
+        stroke: #B4B4B4
+    45%
+        stroke: #B4B4B4
+    55%
+        stroke: #0093E6
+    100%
+        stroke: #0093E6
+
+.third
+    animation-name: line3
+    animation-duration: 3s
+    animation-iteration-count: infinite
+
+@keyframes line3
+    0%
+        stroke: #B4B4B4
+    60%
+        stroke: #B4B4B4
+    70%
+        stroke: #0093E6
+    100%
+        stroke: #0093E6
+
+.fourth
+    animation-name: line4
+    animation-duration: 3s
+    animation-iteration-count: infinite
+
+@keyframes line4
+    0%
+        stroke: #B4B4B4
+    75%
+        stroke: #B4B4B4
+    85%
+        stroke: #0093E6
+    100%
+        stroke: #0093E6
