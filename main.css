@@ -73,6 +73,14 @@ ul li a {
   font-size: 13vh;
   line-height: 15vh;
   color: rgba(74, 77, 78, 0.8);
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.hero._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .second_screen {
@@ -635,32 +643,14 @@ ul li a {
 .svg-button {
   cursor: pointer;
 }
-.svg-button:hover {
-  filter: drop-shadow(0px 0px 23px 22px rgba(0, 147, 230, 0.26));
-  -webkit-animation-name: background-color;
-          animation-name: background-color;
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-}
 
-@-webkit-keyframes background-color {
-  100% {
-    filter: drop-shadow(0px 0px 23px 22px rgba(0, 147, 230, 0.26));
-  }
-}
-
-@keyframes background-color {
-  100% {
-    filter: drop-shadow(0px 0px 23px 22px rgba(0, 147, 230, 0.26));
-  }
-}
 .container-bg {
   background: #f1f1f1;
   margin-top: 150px;
   padding: 50px 0px 150px 0px;
 }
 
-.randomblock {
+#app {
   margin: 15vh 10vw 15vh 15vw;
 }
 

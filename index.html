@@ -3,17 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@next"></script>
     <title>Ipsum</title>
   <link href="./main.css" rel="stylesheet"></head>
   <body>
     <div class="header">
       <div class="logo">
         <a href="" class="logo__link">
-          <img
-            src="./images/Polygon.png"
-            class="logo_img _anim-items _anim-no-hide"
-            alt="logo"
-          />
+          <img src="./images/Polygon.png" class="logo_img" alt="logo" />
         </a>
       </div>
       <div class="menu">
@@ -36,7 +33,7 @@
     <section class="head">
       <div class="head-f_s">
         <div class="first_screen">
-          <div class="hero">
+          <div class="hero _anim-items">
             <h1>
               Lorem
               <br />
@@ -687,12 +684,15 @@
       </svg>
     </section>
     <div class="container-bg">
-      <div class="randomblock">
+      <div id="app" class="randomblock">
         <div class="container">
           <div class="item1">
             <div class="r-card">
               <div class="r-circle"></div>
-              <div class="r-head">Lorem Ipsum is simply<br />dummy text</div>
+              <div class="r-head">
+                <!--Lorem Ipsum is simply<br />dummy text-->
+                <h1>{{ product }}</h1>
+              </div>
               <div class="r-text">
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
@@ -866,5 +866,5 @@
         <div class="b-b-txt">Lorem Ipsum is simply</div>
       </div>
     </div>
-  <script src="./main.64ff9f7796ac7b8b0581.js"></script></body>
+  <script src="./main.bfa7b3c560b485a75c56.js"></script></body>
 </html>
