@@ -4,7 +4,7 @@
         opacity: 0;// - делаем прозрачным,
         transition: all 0.8s ease 0s;// - указываем время появления.
 2   Создаём новую инструкцию:
-    .сласс анимируемого обьекта._active {
+    .kласс анимируемого обьекта._active {
         transform: translate(0px, 0%);// - возвращаем обьект на место,
         opacity: 1;// - делаем непрозрачным.
         }
@@ -20,7 +20,7 @@ let animItems = document.querySelectorAll("._anim-items");
 if (animItems.length > 0) {
   //Проверяем, существование таких классов
   window.addEventListener("scroll", animOnScroll); //Добавляем событие на всё окно браузера
-  function animOnScroll(params) {
+  function animOnScroll() {
     for (let i = 0; i < animItems.length; i++) {
       const animItem = animItems[i]; //Получаем в переменную animItem каждый из элементов массива
       const animItemHeight = animItem.offsetHeight; //Получаем высоту текущего обьекта

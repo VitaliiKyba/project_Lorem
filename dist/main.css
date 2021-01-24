@@ -73,6 +73,14 @@ ul li a {
   font-size: 13vh;
   line-height: 15vh;
   color: rgba(74, 77, 78, 0.8);
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.hero._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .second_screen {
@@ -631,6 +639,120 @@ ul li a {
   100% {
     stroke: #0093E6;
   }
+}
+.svg-button {
+  cursor: pointer;
+}
+
+.container-bg {
+  background: #f1f1f1;
+  margin-top: 150px;
+  padding: 50px 0px 150px 0px;
+}
+
+#app {
+  margin: 15vh 10vw 15vh 15vw;
+}
+
+.container {
+  min-height: 300px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.r-card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.r-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #C4C4C4;
+}
+
+.r-head {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 120%;
+  margin: 25px 0px 20px 0px;
+  color: #4A4D4E;
+}
+
+.r-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 140%;
+  color: #4A4D4E;
+}
+
+.card-list {
+  margin-top: 20px;
+}
+
+.r-list-style {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin: 11px 10px 0px 10px;
+  background: #0093E6;
+}
+
+.r-list {
+  display: flex;
+}
+
+.r-list-txt {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 160%;
+  color: #4A4D4E;
+}
+
+.blue-block {
+  width: 85vw;
+  height: 30vh;
+  background: #0093E6;
+  border-radius: 30px 0px 0px 30px;
+  position: absolute;
+  display: flex;
+  left: 15vw;
+  top: 4950px;
+}
+
+.blue-block1, .blue-block2, .blue-block3 {
+  display: flex;
+}
+
+.r-circle-b {
+  width: 100px;
+  height: 100px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  background: rgba(249, 249, 249, 0.5);
+  margin: 50px 15px 50px 60px;
+}
+
+.b-b-txt {
+  font-family: Vodafone Rg;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 100%;
+  margin-top: 72px;
+  color: #FFFFFF;
 }
 /**
  * Swiper 6.4.5

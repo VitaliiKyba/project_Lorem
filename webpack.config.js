@@ -27,6 +27,7 @@ module.exports = {
   mode: "development",
   entry: {
     main: "./src/scripts/main.js",
+    // app: "./src/mount-app.js",
     //scroll: "/src/scripts/scroll.js",
   },
   output: {

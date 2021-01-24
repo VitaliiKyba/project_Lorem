@@ -12,9 +12,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_styles_style_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../src/styles/style.sass */ "./src/styles/style.sass");
 /* harmony import */ var _src_img_Polygon_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../src/img/Polygon.png */ "./src/img/Polygon.png");
 /* harmony import */ var _src_img_Rectangle36_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/img/Rectangle36.png */ "./src/img/Rectangle36.png");
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
-/* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/swiper-bundle.css */ "./node_modules/swiper/swiper-bundle.css");
-/* harmony import */ var _src_scripts_swiper_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../src/scripts/swiper.js */ "./src/scripts/swiper.js");
+/* harmony import */ var _src_img_Rectangle46_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../src/img/Rectangle46.png */ "./src/img/Rectangle46.png");
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
+/* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/swiper-bundle.css */ "./node_modules/swiper/swiper-bundle.css");
+/* harmony import */ var _src_scripts_swiper_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../src/scripts/swiper.js */ "./src/scripts/swiper.js");
+
 
 
 
@@ -22,12 +24,88 @@ __webpack_require__.r(__webpack_exports__);
 
  //import "/src/scripts/scroll.js";
 
+/*
+1   В классе анимируемого обьекта указать:
+        transform: translate(0px, 120%);// - смещаем вниз,
+        opacity: 0;// - делаем прозрачным,
+        transition: all 0.8s ease 0s;// - указываем время появления.
+2   Создаём новую инструкцию:
+    .kласс анимируемого обьекта._active {
+        transform: translate(0px, 0%);// - возвращаем обьект на место,
+        opacity: 1;// - делаем непрозрачным.
+        }
+3   В html разметке к существующим классам анимируемых обьектов добавляем
+    через пробел класс _anim-items и _anim-no-hide для анимации и для отключения анимации при
+    прокрутке страницы вверх.
+ */
+
+/*Находим и обьявляем в переменную все обьекты (массив обьектов),
+которые будут анимироваться*/
+
+var animItems = document.querySelectorAll("._anim-items");
+
+if (animItems.length > 0) {
+  //Добавляем событие на всё окно браузера
+  var animOnScroll = function animOnScroll(params) {
+    for (var i = 0; i < animItems.length; i++) {
+      var animItem = animItems[i]; //Получаем в переменную animItem каждый из элементов массива
+
+      var animItemHeight = animItem.offsetHeight; //Получаем высоту текущего обьекта
+
+      var animItemOffset = offset(animItem).top; //Получаем значение от верха страницы до текущего обьекта
+
+      var animStart = 5; //Коэффициент запуска анимаций
+
+      var animItemPoint = window.innerHeight - animItemHeight / animStart; //Определяем момент запуска анимации
+
+      if (animItemHeight > window.innerHeight) {
+        //Если расстояние от верха до нашего обьекта меньше высоты экрана
+        animItemPoint = window.innerHeight - window.innerHeight / animStart;
+      }
+
+      if (pageYOffset > animItemOffset - animItemPoint && pageYOffset < animItemOffset + animItemHeight) {
+        animItem.classList.add("_active");
+      } else {
+        if (!animItem.classList.contains("_anime-no-hide")) {
+          animItem.classList.remove("_active");
+        }
+      }
+    }
+  };
+
+  var offset = function offset(el) {
+    //Функция получения положения обьекта в окне браузера
+    var rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return {
+      top: rect.top + scrollTop,
+      left: rect.left + scrollLeft
+    };
+  };
+
+  //Проверяем, существование таких классов
+  window.addEventListener("scroll", animOnScroll);
+  animOnScroll();
+  setTimeout(function () {
+    animOnScroll();
+  }, 400);
+}
+
 var test = function test() {
   return console.log("main.js");
 };
 
 console.log("test");
 test();
+var app = Vue.createApp({
+  data: function data() {
+    return {
+      product: "Boots"
+    };
+  }
+});
+var mountedApp = app.mount("#app");
 
 /***/ }),
 
@@ -62,10 +140,20 @@ var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__.default(".image-slid
   scrollbar: {
     el: ".swiper-scrollbar"
   },
+  // Управление колесом мыши
+  mousewheel: {
+    // Чувствительность колеса мыши
+    sensitivity: 1 // Класс объекта на котором
+    // будет срабатывать прокрутка мышью.
+    //eventsTarget: ".image-slider"
+
+  },
+  // Скорость
+  speed: 900,
   //Количество слайдов в окне
   slidesPerView: 3,
   //Расстояние между слайдами
-  spaceBetween: 35,
+  spaceBetween: 25,
   // Количество пролистываемых слайдов
   slidesPerGroup: 1,
   // Активный слайд по центру
@@ -11877,6 +11965,16 @@ module.exports = __webpack_require__.p + "images/Polygon.png";
 
 module.exports = __webpack_require__.p + "images/Rectangle36.png";
 
+/***/ }),
+
+/***/ "./src/img/Rectangle46.png":
+/*!*********************************!*\
+  !*** ./src/img/Rectangle46.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "images/Rectangle46.png";
+
 /***/ })
 
 /******/ 	});
@@ -11945,4 +12043,4 @@ module.exports = __webpack_require__.p + "images/Rectangle36.png";
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
-//# sourceMappingURL=main.fd3dbe006e41e5e90ba9.js.map
+//# sourceMappingURL=main.bfa7b3c560b485a75c56.js.map
