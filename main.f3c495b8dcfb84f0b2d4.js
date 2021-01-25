@@ -86,7 +86,6 @@ if (animItems.length > 0) {
 
   //Проверяем, существование таких классов
   window.addEventListener("scroll", animOnScroll);
-  animOnScroll();
   setTimeout(function () {
     animOnScroll();
   }, 400);
@@ -12043,4 +12042,4 @@ module.exports = __webpack_require__.p + "images/Rectangle46.png";
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
-//# sourceMappingURL=main.bfa7b3c560b485a75c56.js.map
+//# sourceMappingURL=main.f3c495b8dcfb84f0b2d4.js.map
