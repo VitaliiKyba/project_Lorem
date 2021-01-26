@@ -771,22 +771,43 @@ ul li a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto auto;
-  grid-gap: 10px 50px;
+  grid-gap: 10px;
 }
 
 .item-1 {
-  background: LightSkyBlue;
-  grid-area: 1/1/2/2;
+  grid-area: 1/1/2/3;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 150%;
+  color: #4A4D4E;
 }
 
 .item-2 {
-  background: LightSalmon;
-  grid-area: 2/1/3/2;
+  grid-area: 2/1/3/3;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  color: #4A4D4E;
 }
 
 .item-3 {
-  background: PaleTurquoise;
   grid-area: 1/3/3/5;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  color: #4A4D4E;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .item-4 {
@@ -797,6 +818,8 @@ ul li a {
 .item-5 {
   background: LightSalmon;
   grid-area: 3/3/4/5;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .item-6 {
@@ -817,6 +840,12 @@ ul li a {
 .item-9 {
   background: PaleTurquoise;
   grid-area: 6/1/7/2;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 110%;
+  color: #4A4D4E;
 }
 
 .item-10 {
@@ -825,8 +854,15 @@ ul li a {
 }
 
 .item-11 {
-  background: LightSalmon;
   grid-area: 4/3/7/5;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 120%;
+  color: #4A4D4E;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 /**
  * Swiper 6.4.5
